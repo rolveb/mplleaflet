@@ -3,7 +3,10 @@ from __future__ import absolute_import
 from functools import partial
 
 from jinja2 import Template
-from .mplexporter.renderers.base import Renderer
+try:
+    from .mplexporter.renderers.base import Renderer
+except:
+    from mplexporter.renderers.base import Renderer
 import numpy as np
 
 from .utils import iter_rings
