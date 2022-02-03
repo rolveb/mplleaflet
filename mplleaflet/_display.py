@@ -8,7 +8,10 @@ import base64
 import six
 
 import matplotlib.pyplot as plt
-from .mplexporter.exporter import Exporter
+try:
+    from .mplexporter.exporter import Exporter
+except:
+    from mplexporter.exporter import Exporter
 from jinja2 import Environment, PackageLoader
 
 from .leaflet_renderer import LeafletRenderer
